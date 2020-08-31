@@ -34,7 +34,7 @@ export default {
   ** Plugins to load before mounting the App
   ** https://nuxtjs.org/guide/plugins
   */
-  plugins: [
+  plugins: ['~/plugins/i18n.js'
   ],
   /*
   ** Auto import components
@@ -60,7 +60,9 @@ export default {
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
-  axios: {},
+  axios: {
+    baseURL: "http://127.0.0.1:8000/api/"
+  },
   /*
   ** Content module configuration
   ** See https://content.nuxtjs.org/configuration
@@ -71,5 +73,11 @@ export default {
   ** See https://nuxtjs.org/api/configuration-build/
   */
   build: {
+  },
+  router: {
+    middleware: 'i18n'
+  },
+  generate: {
+    routes: ['/', '/about', '/id', '/id/about']
   }
 }

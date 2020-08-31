@@ -1,0 +1,16 @@
+{
+  "links": {
+    "home": "Beranda",
+    "about": "Tentang",
+    "english": "Versi Inggris",
+    "french": "Versi Francis"
+  },
+  "home": {
+    "title": "Selamat Datang",
+    "introduction": "Perkenalan dalam Bahasa Inggris."
+  },
+  "about": {
+    "title": "Tentang",
+    "introduction": "Halaman ini dibuat untuk memberikan informasi kepada Anda."
+  }
+}
