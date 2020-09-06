@@ -1,6 +1,7 @@
 <template>
   <div class="container">
     <div class="m-table">
+      <button @click="charge()">Charge</button>
       <!-- <div class="m-t-head">
         <div class="m-table-head">ID</div>
         <div class="m-table-head">Business ID</div>
@@ -27,6 +28,16 @@ export default {
     return {
       orders: [],
     };
+  },
+
+  methods: {
+    charge() {
+      let d = {};
+
+      this.$axios.post("charge", d).then((res) => {
+        console.log("Response: ", res);
+      });
+    },
   },
   mounted() {
     this.$axios.get("charge").then((res) => {
